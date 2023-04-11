@@ -4,7 +4,7 @@ const upload=require('../utils/multer');
 const cloudinary=require('../utils/cloudinary'); 
 // Show the list of Patients
 const index = (req, res, next) => {
-    User.find()
+    dynpgfrdr.find()
     .then(response => {
     res.json({
     response
@@ -20,7 +20,7 @@ const index = (req, res, next) => {
 //Show an Patient
 const show = (req, res, next) => {
     let patientID = req.body.patientID
-    User.findById(patientID)
+    dynpgfrdr.findById(patientID)
     .then(response => {
     res.json({
     response
