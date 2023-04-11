@@ -105,7 +105,7 @@ module.exports = {
       .status(409)
       .json({ message: 'Invalid URL' });
       }
-      User.findOneAndUpdate({ _id: user._userId }).then(() => {
+      User.findOne({ _id: user._userId }).then(() => {
       res.status(200).json({ message: 'Token verified successfully.' });
       }).catch((err) => {
       return res.status(500).send({ msg: err.message });
