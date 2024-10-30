@@ -1,9 +1,9 @@
 //FILENAME : db.js
-
+//mongodb+srv://Ahmed_Ayman:xFEfmtAPu8xmDYwx@node-auth.jwdx4vs.mongodb.net/?retryWrites=true&w=majority
 const mongoose = require("mongoose");
 
 // Replace this with your MONGOURI.
-const MONGOURI =  "mongodb+srv://Ahmed_Ayman:xFEfmtAPu8xmDYwx@node-auth.jwdx4vs.mongodb.net/?retryWrites=true&w=majority";
+const MONGOURI =  "mongodb+srv://Ahmed_Ayman:xFEfmtAPu8xmDYwx@node-auth.jwdx4vs.mongodb.net/?retryWrites=true&w=majority&appName=node-auth";
 
 const InitiateMongoServer = async () => {
   try {
