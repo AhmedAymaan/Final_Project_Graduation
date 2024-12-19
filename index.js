@@ -84,6 +84,22 @@ app.use("/doctor", doctorUser);
 app.use("/patient", patientUser);
 app.use("/alldoctors", allDoctors);
 app.use("/doctorprofile", doctorProfile);
+onst swaggerOptions = {
+  swaggerDefinition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'API Documentation',
+      version: '1.0.0',
+      description: 'API information',
+    },
+    servers: [
+      {
+        url: 'https://pleasant-comfort-production-f2ef.up.railway.app',
+      },
+    ],
+  },
+  apis: ['./routes/*.js'], // Define paths to files containing annotations
+};
 const spacs = swaggerJsDoc(options)
 app.use(
   "/api-docs" ,
