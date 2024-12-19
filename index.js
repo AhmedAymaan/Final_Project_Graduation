@@ -84,7 +84,7 @@ app.use("/doctor", doctorUser);
 app.use("/patient", patientUser);
 app.use("/alldoctors", allDoctors);
 app.use("/doctorprofile", doctorProfile);
-onst swaggerOptions = {
+const swaggerOptions = {
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
