@@ -88,9 +88,9 @@ onst swaggerOptions = {
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
-      title: 'API Documentation',
+      title: 'Hospital Management System ',
       version: '1.0.0',
-      description: 'API information',
+      description: 'Hospital Management System API information for System analysis - 1 ',
     },
     servers: [
       {
