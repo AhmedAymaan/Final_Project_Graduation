@@ -61,6 +61,8 @@ InitiateMongoServer();
 
 const app = express();
 const cors = require('cors');
+const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
 app.use(cors());
 // PORT
 const PORT = process.env.PORT || 4000;
@@ -82,6 +84,12 @@ app.use("/doctor", doctorUser);
 app.use("/patient", patientUser);
 app.use("/alldoctors", allDoctors);
 app.use("/doctorprofile", doctorProfile);
+const spacs = swaggerJsDoc(options)
+app.use(
+  "/api-docs" ,
+  swaggerUi.serve ,
+  swaggerUi.setup(spacs)
+)
 app.listen(PORT, (req, res) => {
   console.log(`Server Started at PORT ${PORT}`);
 });
